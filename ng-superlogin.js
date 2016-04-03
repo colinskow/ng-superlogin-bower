@@ -1,5 +1,5 @@
 /**
- * @license ng-superlogin v0.2.1
+ * @license ng-superlogin v0.2.2
  * (c) 2015 Colin Skow
  * License: MIT
  */
@@ -221,7 +221,7 @@ angular.module('superlogin', [])
         checkExpired: superloginSession.checkExpired,
         authenticate: function() {
           var deferred = $q.defer();
-          var session = superloginSession.getSession;
+          var session = superloginSession.getSession();
           if(session) {
             deferred.resolve(session);
           } else {
@@ -523,4 +523,5 @@ angular.module('superlogin', [])
     }
 
   }]);
+
 })(angular);
